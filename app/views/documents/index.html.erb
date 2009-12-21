@@ -1,0 +1,21 @@
+<% title "Documents" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>User</th>
+  </tr>
+  <% for document in @documents %>
+    <tr>
+      <td><%=h document.title %></td>
+      <td><%=h document.content %></td>
+      <td><%=h document.user_id %></td>
+      <td><%= link_to "Show", document %></td>
+      <td><%= link_to "Edit", edit_document_path(document) %></td>
+      <td><%= link_to "Destroy", document, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Document", new_document_path %></p>

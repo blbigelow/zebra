@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
 	acts_as_authentic
 	acts_as_authorization_subject
+	
+	has_many :posts
+	has_many :discussions
+	has_many :replies
+	has_many :documents
 end

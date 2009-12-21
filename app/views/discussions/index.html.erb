@@ -1,0 +1,21 @@
+<% title "Discussions" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>User</th>
+  </tr>
+  <% for discussion in @discussions %>
+    <tr>
+      <td><%=h discussion.title %></td>
+      <td><%=h discussion.body %></td>
+      <td><%=h discussion.user_id %></td>
+      <td><%= link_to "Show", discussion %></td>
+      <td><%= link_to "Edit", edit_discussion_path(discussion) %></td>
+      <td><%= link_to "Destroy", discussion, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Discussion", new_discussion_path %></p>

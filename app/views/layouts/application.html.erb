@@ -4,6 +4,8 @@
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application' %>
+		<%= stylesheet_link_tag 'formtastic' %>
+		<%= stylesheet_link_tag 'formtastic_changes' %>
     <%= yield(:head) %>
   </head>
   <body>

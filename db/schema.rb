@@ -9,7 +9,53 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091014041311) do
+ActiveRecord::Schema.define(:version => 20091215050313) do
+
+  create_table "blogs", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "discussions", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "documents", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "blog_id"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "replies", :force => true do |t|
+    t.integer  "discussion_id"
+    t.integer  "user_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reply_backs", :force => true do |t|
+    t.integer  "reply_id"
+    t.integer  "reply_to_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -19,7 +65,8 @@ ActiveRecord::Schema.define(:version => 20091014041311) do
     t.datetime "updated_at"
   end
 
-  create_table "roles_users", :force => true do |t|
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer  "id",         :null => false
     t.integer  "user_id"
     t.integer  "role_id"
     t.datetime "created_at"

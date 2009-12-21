@@ -1,7 +1,9 @@
-<h2>Zebra 2 on Rails</h2>
+<h2>Zebra on Rails</h2>
 
 <%= link_to "Login", :action => "new" %>
 
-<%= link_to "Logout", :action => "destroy" %>
+<%= link_to "Logout", :action => "destroy", :method => :delete, :confirm => "Are you sure you want to logout?" %>
 
 <%= link_to "Register", :controller => "users", :action => "new" %>
+
+<%= link_to "Dashboard", dashboards_path %>

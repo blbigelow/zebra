@@ -1,0 +1,41 @@
+<div id="dashboard">
+	<div id="blog_posts">
+		<h3>Blog Posts</h3>
+		<% if !@user.posts.blank? %>
+			<ul>
+			<% for post in @user.posts %>
+				<li><%= link_to post.title, post_path(post) %></li>
+			<% end %>
+			</ul>
+		<% else %>
+			no posts available
+		<% end %>
+		<p><%= link_to "New Blog Post", new_post_path %></p>
+	</div>
+	<div id="discussions">
+		<h3>Discussions</h3>
+		<% if !@user.discussions.blank? %>
+			<ul>
+				<% for discussion in @user.discussions %>
+					<li><%= link_to discussion.title, discussion_path(discussion) %></li>
+				<% end %>
+			</ul>
+		<% else %>
+			no discussions available
+		<% end %>
+		<p><%= link_to "New Discussion", new_discussion_path %></p>
+	</div>
+	<div id="documents">
+		<h3>Documents</h3>
+		<% if !@user.documents.blank? %>
+			<ul>
+				<% for document in @user.documents %>
+					<li><%= link_to document.title, document_path(document) %></li>
+				<% end %>
+			</ul>
+		<% else %>
+			no documents available
+		<% end %>
+		<p><%= link_to "New Document", new_document_path %></p>
+	</div>
+</div>

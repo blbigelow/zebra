@@ -1,7 +1,8 @@
 <h2>Login</h2>
 
-<% form_for @user_session, :url => user_sessions_path do |f| -%>
-  <%= f.label :email, "Email" %>
+<% form_for @user_session, :url => {:action => :create} do |f| %>
+  <%= f.error_messages %>
+	<%= f.label :email, "Email" %>
 	<%= f.text_field :email %>
 	<br/>
 	<%= f.label :password, "Password" %>
@@ -11,4 +12,4 @@
 	<%= f.check_box :remember_me %>
 	<br/>
 	<%= f.submit "Login" %>
-<% end -%>
+<% end %>

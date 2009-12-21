@@ -1,4 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :documents
+
+  map.resources :dashboards
+
+  map.resources :replies
+
+  map.resources :discussions
+
+  map.resources :posts
+
+  map.resources :blogs
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -6,7 +18,8 @@ ActionController::Routing::Routes.draw do |map|
   # Keep in mind you can assign values other than :controller and :action
 	map.resources :users
 	map.resources :user_sessions
-	map.root :controller => "user_sessions", :action => "new"
+	map.logout 'logout', :controller => "user_sessions", :action => "destroy"
+	map.root :controller => "user_sessions"
 	
 	
   # Sample of named route:

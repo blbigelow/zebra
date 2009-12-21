@@ -1,0 +1,21 @@
+<% title "Replies" %>
+
+<table>
+  <tr>
+    <th>Discussion</th>
+    <th>User</th>
+    <th>Body</th>
+  </tr>
+  <% for reply in @replies %>
+    <tr>
+      <td><%=h reply.discussion_id %></td>
+      <td><%=h reply.user_id %></td>
+      <td><%=h reply.body %></td>
+      <td><%= link_to "Show", reply %></td>
+      <td><%= link_to "Edit", edit_reply_path(reply) %></td>
+      <td><%= link_to "Destroy", reply, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Reply", new_reply_path %></p>

@@ -1,0 +1,20 @@
+<% title "Discussion" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @discussion.title %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%=h @discussion.body %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @discussion.user_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_discussion_path(@discussion) %> |
+  <%= link_to "Destroy", @discussion, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", discussions_path %>
+</p>

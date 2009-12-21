@@ -1,0 +1,20 @@
+<% title "Reply" %>
+
+<p>
+  <strong>Discussion:</strong>
+  <%=h @reply.discussion_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @reply.user_id %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%=h @reply.body %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_reply_path(@reply) %> |
+  <%= link_to "Destroy", @reply, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", replies_path %>
+</p>

@@ -1,0 +1,9 @@
+<%= error_messages_for :discussion %>
+<% semantic_form_for @discussion do |f| %>
+  <% f.inputs do %>
+	  <%= f.input :title %>
+		<%= f.input :body %>
+		<%= f.input :user_id, :as => :hidden %>
+	<% end %>
+	<%= f.buttons %>
+<% end %>

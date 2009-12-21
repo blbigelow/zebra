@@ -1,6 +1,10 @@
 class UserSessionsController < ApplicationController
-	before_filter :require_no_user, :only => [:new, :create]
-	before_filter :require_user, :only => :destroy
+	
+	access_control do
+		allow anonymous, :to => [:new,:create]
+		allow logged_in, :to => [:destroy]
+		allow all, :to => [:index]
+	end
 	
 	def index
 		
@@ -14,15 +18,15 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_back_or_default users_url
+      redirect_to dashboards_url
     else
-      render :action => :new
+      redirect_to :action => :new
     end
   end
 
   def destroy
     current_user_session.destroy
     flash[:notice] = "Logout successful!"
-    redirect_back_or_default new_user_session_url
+    redirect_to :action => :index
   end
 end

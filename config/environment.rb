@@ -22,6 +22,9 @@ Rails::Initializer.run do |config|
 	config.gem 'laserlemon-vestal_versions', :lib => 'vestal_versions', :source => 'http://gems.github.com'
 	config.gem "authlogic"
 	config.gem "be9-acl9", :source => "http://gems.github.com", :lib => "acl9"
+	config.gem "formtastic"
+	config.gem 'jkraemer-acts_as_ferret', :version => '~> 0.4.4', :lib => 'acts_as_ferret', :source => 'http://gems.github.com'
+	config.gem 'ferret'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -41,4 +44,6 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+	
+	require 'acts_as_ferret'
 end
