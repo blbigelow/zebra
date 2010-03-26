@@ -2,11 +2,11 @@
 
 <p>
   <strong>User:</strong>
-  <%=h @post.user_id %>
+  <%=h @post.user.name %>
 </p>
 <p>
   <strong>Blog:</strong>
-  <%=h @post.blog_id %>
+  <%=h @post.blog.title %>
 </p>
 <p>
   <strong>Title:</strong>
@@ -16,7 +16,10 @@
   <strong>Body:</strong>
   <%=h @post.body %>
 </p>
-
+<p>
+	<strong>Tags:</strong>
+	<%=h @post.tag_list %>
+</p>
 <p>
   <%= link_to "Edit", edit_post_path(@post) %> |
   <%= link_to "Destroy", @post, :confirm => 'Are you sure?', :method => :delete %> |

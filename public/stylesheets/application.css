@@ -1,7 +1,12 @@
 body {
-  background-color: #4B7399;
+  background-color: #000;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+	color: #000;
+}
+
+h3 {
+	color: #000;
 }
 
 a img {
@@ -9,7 +14,7 @@ a img {
 }
 
 a {
-  color: #0000FF;
+  color: #10A12A;
 }
 
 .clear {
@@ -19,12 +24,13 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 800px;
   margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
+  background-color: #F0EAFB;
+  padding: 10px 10px;
   border: solid 1px black;
   margin-top: 20px;
+	height: 650px;
 }
 
 #flash_notice, #flash_error {
@@ -64,7 +70,7 @@ a {
   font-size: 12px;
   margin: 0px;
   background-color: #c00;
-  color: #fff;
+  color: #000;
 }
 #errorExplanation p {
   color: #333;
@@ -73,8 +79,51 @@ a {
 }
 #errorExplanation ul {
   margin: 2px 24px;
+	color: #10A12A;
 }
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+
+#columns {
+	min-height: 550px;
+	width: 800px;
+	background-color: #F0EAFB;
+}
+
+#left_column {
+	float: left;
+	width: 150px;
+	min-height: 650px;
+}
+
+#right_column {
+	float: right;
+	width: 650px;
+	margin-top: -15px;
+	min-height: 650px;
+}
+
+#menu {
+	color: #0DF52D;
+}
+
+ul.main-menu {
+	list-style:none;
+}
+
+ul.main-menu li {
+	display:inline;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#menu {
+	height:30px;
+}
+
+#menu ul li.Background div{
+  height: 100%;
+  margin-right: 31px;
 }

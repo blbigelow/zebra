@@ -9,10 +9,13 @@
   <%=h @discussion.body %>
 </p>
 <p>
-  <strong>User:</strong>
-  <%=h @discussion.user_id %>
+  <strong>Author:</strong>
+  <%=h @discussion.user.name %>
 </p>
-
+<p>
+	<strong>Tags:</strong>
+	<%=h @discussion.tag_list %>
+</p>
 <p>
   <%= link_to "Edit", edit_discussion_path(@discussion) %> |
   <%= link_to "Destroy", @discussion, :confirm => 'Are you sure?', :method => :delete %> |

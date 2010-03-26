@@ -6,19 +6,34 @@
     <%= stylesheet_link_tag 'application' %>
 		<%= stylesheet_link_tag 'formtastic' %>
 		<%= stylesheet_link_tag 'formtastic_changes' %>
+		<%= stylesheet_link_tag 'jquery.sliding-menu' %>
+		<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js', :cache => true %>
+		<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js', :cache => true %>
+		<%= javascript_include_tag 'jquery.sliding-menu', :cache => true %>
+		<%= javascript_include_tag 'application', :cache => true %>
     <%= yield(:head) %>
   </head>
   <body>
     <div id="container">
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
-      
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
-      
-      <%= yield %>
+			<div id="menu">
+				<%= render_navigation %>
+			</div>
+			<div id="columns">
+				<div id="left_column">
+					Left Column
+				</div>
+				<div id="right_column">
+					<div id="conent">
+						<%- if show_title? -%>
+			        <h1><%=h yield(:title) %></h1>
+			      <%- end -%>
+						<%- flash.each do |name, msg| -%>
+			        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+			      <%- end -%>
+						<%= yield %>
+					</div>
+				</div>
+			</div>
     </div>
   </body>
 </html>

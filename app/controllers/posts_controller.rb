@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-	before_filter :load_post, :only => [:edit,:destroy]
+	before_filter :load_post, :only => [:edit,:update,:destroy]
 	before_filter :load_blog, :only => [:new, :create]
 	
 	access_control do
 		allow all, :to => [:index,:show]
 		allow :owner, :of => :blog, :to => [:new,:create]
-		allow :owner, :of => :post, :to => [:edit,:destroy]
+		allow :owner, :of => :post, :to => [:edit,:update,:destroy]
 	end
 	
   def index
@@ -63,7 +63,7 @@ class PostsController < ApplicationController
 	def load_blog
 		@blog = session[:blog]
 		if !@blog
-			redirect_to blogs_url
+			redirect_to :controller => 'select_blog', :action => 'show'
 		end
 	end
 end

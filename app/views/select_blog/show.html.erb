@@ -1,0 +1,4 @@
+<% form_tag :action => "update" do %>
+  <%= select_tag :blog, options_from_collection_for_select(@blogs, 'id', 'title') %>
+	<%= submit_tag "Select Blog", :id => "submit", :name => "submit", :class => "form_submit" %>
+<% end -%>

@@ -9,10 +9,13 @@
   <%=h @document.content %>
 </p>
 <p>
-  <strong>User:</strong>
-  <%=h @document.user_id %>
+  <strong>Author:</strong>
+  <%=h @document.user.name %>
 </p>
-
+<p>
+	<strong>Tags:</strong>
+	<%=h @document.tag_list %>
+</p>
 <p>
   <%= link_to "Edit", edit_document_path(@document) %> |
   <%= link_to "Destroy", @document, :confirm => 'Are you sure?', :method => :delete %> |
