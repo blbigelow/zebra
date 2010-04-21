@@ -1,0 +1,270 @@
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" LIMIT 1[0m
+
+
+Processing BlogsController#destroy (for 0.0.0.0 at 2010-04-20 23:43:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>#<Blog id: 298486374, title: "MyString", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21", user_id: nil>, "controller"=>"blogs"}
+Redirected to http://test.host/user_sessions/new
+  [4;35;1mBlog Load (0.3ms)[0m   [0mSELECT * FROM "blogs" LIMIT 1[0m
+
+
+Processing BlogsController#edit (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>#<Blog id: 298486374, title: "MyString", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21", user_id: nil>, "controller"=>"blogs"}
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" WHERE ("blogs"."id" = 298486374) [0m
+Redirected to http://test.host/user_sessions/new
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mBlog Load (0.4ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered search/_search (2.4ms)
+Completed in 18ms (View: 15, DB: 4) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#new (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"blogs"}
+Redirected to http://test.host/user_sessions/new
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" LIMIT 1[0m
+
+
+Processing BlogsController#show (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>#<Blog id: 298486374, title: "MyString", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21", user_id: nil>, "controller"=>"blogs"}
+  [4;35;1mBlog Load (0.2ms)[0m   [0mSELECT * FROM "blogs" WHERE ("blogs"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering blogs/show
+Rendered search/_search (1.2ms)
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://test.host/blogs/298486374]
+
+
+Processing DashboardsController#new (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dashboards"}
+Redirected to http://test.host/user_sessions/new
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" LIMIT 1[0m
+
+
+Processing DiscussionsController#destroy (for 0.0.0.0 at 2010-04-20 23:43:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>#<Discussion id: 298486374, title: "MyString", body: "MyText", user_id: 1, created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"discussions"}
+Redirected to http://test.host/user_sessions/new
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" LIMIT 1[0m
+
+
+Processing DiscussionsController#edit (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>#<Discussion id: 298486374, title: "MyString", body: "MyText", user_id: 1, created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"discussions"}
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" WHERE ("discussions"."id" = 298486374) [0m
+Redirected to http://test.host/user_sessions/new
+
+
+Processing DiscussionsController#index (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;35;1mDiscussion Load (0.4ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered search/_search (1.4ms)
+Completed in 15ms (View: 12, DB: 1) | 200 OK [http://test.host/discussions]
+
+
+Processing DiscussionsController#new (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"discussions"}
+Redirected to http://test.host/user_sessions/new
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" LIMIT 1[0m
+
+
+Processing DiscussionsController#show (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>#<Discussion id: 298486374, title: "MyString", body: "MyText", user_id: 1, created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"discussions"}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" WHERE ("discussions"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering discussions/show
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" LIMIT 1[0m
+
+
+Processing DocumentsController#destroy (for 0.0.0.0 at 2010-04-20 23:43:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>#<Document id: 298486374, title: "MyString", content: "MyText", user_id: 1, created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"documents"}
+Redirected to http://test.host/user_sessions/new
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" LIMIT 1[0m
+
+
+Processing DocumentsController#edit (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>#<Document id: 298486374, title: "MyString", content: "MyText", user_id: 1, created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"documents"}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = 298486374) [0m
+Redirected to http://test.host/user_sessions/new
+
+
+Processing DocumentsController#index (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mDocument Load (0.4ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered search/_search (1.3ms)
+Completed in 14ms (View: 11, DB: 1) | 200 OK [http://test.host/documents]
+
+
+Processing DocumentsController#new (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"documents"}
+Redirected to http://test.host/user_sessions/new
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" LIMIT 1[0m
+
+
+Processing DocumentsController#show (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>#<Document id: 298486374, title: "MyString", content: "MyText", user_id: 1, created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"documents"}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering documents/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" LIMIT 1[0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2010-04-20 23:43:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>#<Post id: 298486374, user_id: 1, blog_id: 1, title: "MyString", body: "MyText", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"posts"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 298486374) [0m
+Redirected to http://test.host/user_sessions/new
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" LIMIT 1[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>#<Post id: 298486374, user_id: 1, blog_id: 1, title: "MyString", body: "MyText", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"posts"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 298486374) [0m
+Redirected to http://test.host/user_sessions/new
+
+
+Processing PostsController#index (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered search/_search (1.3ms)
+Completed in 14ms (View: 11, DB: 2) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Redirected to http://test.host/select_blog/show
+Filter chain halted as [:load_blog] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/posts/new]
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" LIMIT 1[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>#<Post id: 298486374, user_id: 1, blog_id: 1, title: "MyString", body: "MyText", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"posts"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering posts/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mReply Load (0.3ms)[0m   [0;1mSELECT * FROM "replies" LIMIT 1[0m
+
+
+Processing RepliesController#destroy (for 0.0.0.0 at 2010-04-20 23:43:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>#<Reply id: 298486374, discussion_id: 1, user_id: 1, body: "MyText", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"replies"}
+Redirected to http://test.host/user_sessions/new
+  [4;35;1mReply Load (0.3ms)[0m   [0mSELECT * FROM "replies" LIMIT 1[0m
+
+
+Processing RepliesController#edit (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>#<Reply id: 298486374, discussion_id: 1, user_id: 1, body: "MyText", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"replies"}
+  [4;36;1mReply Load (0.3ms)[0m   [0;1mSELECT * FROM "replies" WHERE ("replies"."id" = 298486374) [0m
+Redirected to http://test.host/user_sessions/new
+
+
+Processing RepliesController#index (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"replies"}
+  [4;35;1mReply Load (0.4ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Rendered search/_search (1.3ms)
+Completed in 14ms (View: 11, DB: 1) | 200 OK [http://test.host/replies]
+
+
+Processing RepliesController#new (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"replies"}
+Redirected to http://test.host/user_sessions/new
+  [4;36;1mReply Load (0.3ms)[0m   [0;1mSELECT * FROM "replies" LIMIT 1[0m
+
+
+Processing RepliesController#show (for 0.0.0.0 at 2010-04-20 23:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>#<Reply id: 298486374, discussion_id: 1, user_id: 1, body: "MyText", created_at: "2010-04-21 05:43:21", updated_at: "2010-04-21 05:43:21">, "controller"=>"replies"}
+  [4;35;1mReply Load (0.3ms)[0m   [0mSELECT * FROM "replies" WHERE ("replies"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering replies/show
+Rendered search/_search (1.2ms)
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://test.host/replies/298486374]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

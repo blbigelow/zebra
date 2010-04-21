@@ -107,6 +107,8 @@ a {
 
 #menu {
 	color: #0DF52D;
+	width: 65%;
+	height: 30px;
 }
 
 ul.main-menu {
@@ -119,11 +121,13 @@ ul.main-menu li {
 	padding-left: 5px;
 }
 
-#menu {
-	height:30px;
-}
-
 #menu ul li.Background div{
   height: 100%;
   margin-right: 31px;
+}
+
+#search {
+	float: right;
+	margin-top: -27px;
+	margin-right: 10px;
 }

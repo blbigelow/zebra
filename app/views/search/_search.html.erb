@@ -1,0 +1,7 @@
+<% form_tag(search_path) do %>
+	<p>
+		<%= label_tag(:searchTerm, "Search:") %>
+		<%= text_field_tag(:searchTerm) %>
+	</p>
+	<%= submit_tag "Go", :id => "search_btn", :name => "search", :class => "form_search_submit" %>
+<% end %>

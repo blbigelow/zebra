@@ -1,0 +1,8 @@
+<h3>Search Results</h3>
+<ul>
+	<% @search.each_hit_with_result do |hit, result| %>
+	<li>
+		<%= result.title %>
+	</li>
+	<% end %>
+</ul>

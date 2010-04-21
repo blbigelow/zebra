@@ -20,6 +20,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.resources :user_sessions
 	map.logout 'logout', :controller => "user_sessions", :action => "destroy"
 	map.root :controller => "user_sessions"
+	map.search "search", :controller => "search", :action => "show"
 	
 	
   # Sample of named route:

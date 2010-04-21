@@ -4,4 +4,10 @@ class Post < ActiveRecord::Base
 	
 	belongs_to :user
 	belongs_to :blog
+	
+	searchable do
+		text :title, :boost => 2.0
+		text :body
+		text :tags
+	end
 end

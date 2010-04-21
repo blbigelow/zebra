@@ -4,4 +4,10 @@ class Discussion < ActiveRecord::Base
 	
 	has_many :replies
 	belongs_to :user
+	
+	searchable do
+		text :title, :boost => 2.0
+		text :body
+		text :tags
+	end
 end
