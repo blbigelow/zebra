@@ -1,0 +1,9 @@
+acts_as_ferret.log
+development.log
+production.log
+server.log
+sunspot-solr-development.log
+test.log
+development.sqlite3
+test.sqlite3
+zebra2.tmproj

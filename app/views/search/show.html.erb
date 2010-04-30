@@ -2,7 +2,7 @@
 <ul>
 	<% @search.each_hit_with_result do |hit, result| %>
 	<li>
-		<%= result.title %>
+		<%= link_to result.title, result %>
 	</li>
 	<% end %>
 </ul>
