@@ -7,7 +7,7 @@ h1. Zebra
 h3. Plugins and Gems used
 
 *Plugins*
-* active_scaffold
+* none, hopefully
 
 
 
